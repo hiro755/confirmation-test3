@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>新規会員登録</title>
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-</head>
-<body>
-  <div class="page-bg"></div> <!-- 背景レイヤーだけ -->
+@extends('layouts.app')
+@section('title', '新規会員登録 STEP1')
 
+@section('content')
+<div class="page-bg">
   <div class="container">
     <div class="card">
       <h1>PiGLy</h1>
@@ -41,12 +36,13 @@
           @enderror
         </div>
 
-        <button type="submit">次に進む</button>
+        <div class="actions">
+          <button type="submit" class="btn">次に進む</button>
+        </div>
       </form>
 
-      <a href="{{ url('/login') }}">ログインはこちら</a>
+      <a href="{{ url('/login') }}" class="link-underline">ログインはこちら</a>
     </div>
   </div>
-
-</body>
-</html>
+</div>
+@endsection

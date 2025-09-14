@@ -3,6 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Laravel\Fortify\Contracts\RegisterViewResponse;
+use App\Actions\Fortify\RegisterViewResponse as CustomRegisterViewResponse;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,8 +16,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
-    }
+    $this->app->bind(RegisterViewResponse::class, CustomRegisterViewResponse::class);
+}
 
     /**
      * Bootstrap any application services.
@@ -22,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
-        //
-    }
+{
+    Paginator::useBootstrap();
+}
 }

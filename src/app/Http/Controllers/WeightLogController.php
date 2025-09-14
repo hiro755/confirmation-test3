@@ -59,7 +59,7 @@ public function store(StoreWeightLogRequest $request)
     return redirect()->back()->with('success', '登録完了');
 }
 
-public function update(UpdateWeightLogRequest $request, WeightLog $weightLog)
+public function update(WeightLogRequest $request, WeightLog $weightLog)
 {
     $weightLog->update($request->validated());
     return redirect()->route('weight_logs.index')->with('success', '更新しました');

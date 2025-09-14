@@ -25,7 +25,7 @@
     </div>
     <div class="pgl-card pgl-stat">
       <div class="pgl-stat-label">最新体重</div>
-      <div class="pgl-stat-value">{{ $latest ?? '-' }}<span> kg</span></div>
+      <div class="pgl-stat-value">{{ $latestWeight ?? '-' }}<span> kg</span></div>
     </div>
   </div>
 

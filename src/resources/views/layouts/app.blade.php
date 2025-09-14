@@ -12,7 +12,6 @@
 
   {{-- JS --}}
   <script src="{{ asset('js/app.js') }}" defer></script>
-
   @stack('head') {{-- 必要なら追加の head スタック --}}
 </head>
 <body>

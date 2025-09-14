@@ -39,7 +39,7 @@
       <!-- 運動時間 -->
       <div class="form-group">
         <label>運動時間</label>
-        <input type="time" name="exercise_time" value="{{ old('exercise_time', $log->exercise_time) }}" step="1">
+        <input type="time" name="exercise_time" value="{{ old('exercise_time', $log->exercise_time) }}" >
         @error('exercise_time') <p class="error">{{ $message }}</p> @enderror
       </div>
 
